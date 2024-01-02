@@ -1,5 +1,8 @@
-![My Image](https://th.bing.com/th/id/OIP.EZeP9vSGOADD1MSdiDctcgHaE7?rs=1&pid=ImgDetMain)
 # Vodafone's Crystal Ball : A Machine Learning Approach to Analyze Customer Churn
+
+## Business Understanding
+This project aims to analyze and predict customer churn in Vodafone, a telecom organization. The primary goal is to develop a robust churn prediction model to identify customers likely to leave and understand the reasons behind churn. The dataset is divided into three parts: train dataset, evaluation dataset, and test dataset.
+
 ## Table of Content 
 - [Project Description](#project-description)
 - [Data sources](#data-sources)
