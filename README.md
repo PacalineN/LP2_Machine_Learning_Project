@@ -1,7 +1,6 @@
 # Vodafone's Crystal Ball : A Machine Learning Approach to Analyze Customer Churn
 
-## Business Understanding
-This project aims to analyze and predict customer churn in Vodafone, a telecom organization. The primary goal is to develop a robust churn prediction model to identify customers likely to leave and understand the reasons behind churn. The dataset is divided into three parts: train dataset, evaluation dataset, and test dataset.
+
 
 ## Table of Content 
 - [Project Description](#project-description)
@@ -50,5 +49,37 @@ CustomerID: A unique ID that identifies each customer.
 * Tenure in Months: Indicates the total amount of months that the customer has been with the company 
 * total charges is  equal to each tenue times monthly charges.
 * Multiple Lines: Indicates if the customer subscribes to multiple telephone lines with the company: Yes, No
+  #### Data Cleaning/Preparation
+  1. **Clean the Data:**
+   - Fix issues like missing values and incorrect data types in the dataset.
+   - Use Simple Imputer to fill in missing values and correct data types.
 
- 
+2. **Create a Pipeline:**
+   - Set up a systematic process (pipeline) to automatically apply the same corrections to new datasets.
+
+3. **Prepare for Machine Learning:**
+   - Convert categorical data to numerical format using OneHot Encoder and Label Encoder for efficient machine learning model training.
+
+     #### Model  Selection & Evaluation
+     Step 1: Data Preparation
+
+- Split the data into training and evaluation sets, allocating 80% for training and the remaining for evaluation.
+
+Step 2: Model Training
+- Train five machine-learning models: RandomForest, DecisionTree, GradientBoosting, KNN, and SupportVector classifiers.
+
+Step 3: Dataset Balancing and Optimization
+- Address the imbalanced target column using both RandomSampler and SMOTE, with SMOTE showing better performance.
+- Implement feature selection to enhance model performance.
+- Conduct hyperparameter tuning using RandomizedSearchCV.
+
+Step 4: Model Evaluation
+- Assess the model's performance using the f1-score metric.
+- Evaluate the AUC-ROC curve to visually summarize the models' ability to distinguish between classes.
+- Plot the ROC curve for each model with their respective AUC scores to analyze performance.
+
+  #### Results
+  The GradientBoosting classifier emerged as the top-performing model after modeling and hyperparameter optimization. It predicted 591 customers as likely to churn and 1409 as unlikely to churn. The company should focus on reaching out to the 591 predicted churners, implementing measures to retain them, crucial for maximizing revenue in the upcoming financial year.
+
+  
+     
